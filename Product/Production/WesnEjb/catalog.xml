@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="file:/C:/SourceForge/WeSN/trunk/Product/Production/Interfaces/WSN.wsdl" uri="src/conf/xml-resources/web-services/NotificationProducerService/wsdl/WSN.wsdl"/>
+    <system systemId="file:/C:/SourceForge/WeSN/trunk/Product/Production/Interfaces/docs.oasis-open.org/wsn/b-2.xsd" uri="src/conf/xml-resources/web-services/NotificationProducerService/wsdl/docs.oasis-open.org/wsn/b-2.xsd"/>
+    <system systemId="file:/C:/SourceForge/WeSN/trunk/Product/Production/Interfaces/rw-2.wsdl" uri="src/conf/xml-resources/web-services/NotificationProducerService/wsdl/rw-2.wsdl"/>
+    <system systemId="file:/C:/SourceForge/WeSN/trunk/Product/Production/Interfaces/www.w3.org/2005/08/addressing/ws-addr.xsd" uri="src/conf/xml-resources/web-services/NotificationProducerService/wsdl/www.w3.org/2005/08/addressing/ws-addr.xsd"/>
+    <system systemId="file:/C:/SourceForge/WeSN/trunk/Product/Production/Interfaces/docs.oasis-open.org/wsrf/bf-2.xsd" uri="src/conf/xml-resources/web-services/NotificationProducerService/wsdl/docs.oasis-open.org/wsrf/bf-2.xsd"/>
+    <system systemId="file:/C:/SourceForge/WeSN/trunk/Product/Production/Interfaces/docs.oasis-open.org/wsn/t-1.xsd" uri="src/conf/xml-resources/web-services/NotificationProducerService/wsdl/docs.oasis-open.org/wsn/t-1.xsd"/>
+    <system systemId="file:/C:/SourceForge/WeSN/trunk/Product/Production/Interfaces/docs.oasis-open.org/wsrf/r-2.xsd" uri="src/conf/xml-resources/web-services/NotificationProducerService/wsdl/docs.oasis-open.org/wsrf/r-2.xsd"/>
+    <system systemId="file:/C:/SourceForge/WeSN/trunk/Product/Production/Interfaces/www.w3.org/2001/xml.xsd" uri="src/conf/xml-resources/web-services/NotificationProducerService/wsdl/www.w3.org/2001/xml.xsd"/>
+    <system systemId="file:/C:/Projects/WeSN/trunk/Product/Production/Interfaces/WSN.wsdl" uri="src/conf/xml-resources/web-services/SubscriptionManagerService/wsdl/WSN.wsdl"/>
+    <system systemId="file:/C:/Projects/WeSN/trunk/Product/Production/Interfaces/docs.oasis-open.org/wsn/b-2.xsd" uri="src/conf/xml-resources/web-services/SubscriptionManagerService/wsdl/docs.oasis-open.org/wsn/b-2.xsd"/>
+    <system systemId="file:/C:/Projects/WeSN/trunk/Product/Production/Interfaces/rw-2.wsdl" uri="src/conf/xml-resources/web-services/SubscriptionManagerService/wsdl/rw-2.wsdl"/>
+    <system systemId="file:/C:/Projects/WeSN/trunk/Product/Production/Interfaces/www.w3.org/2005/08/addressing/ws-addr.xsd" uri="src/conf/xml-resources/web-services/SubscriptionManagerService/wsdl/www.w3.org/2005/08/addressing/ws-addr.xsd"/>
+    <system systemId="file:/C:/Projects/WeSN/trunk/Product/Production/Interfaces/docs.oasis-open.org/wsrf/bf-2.xsd" uri="src/conf/xml-resources/web-services/SubscriptionManagerService/wsdl/docs.oasis-open.org/wsrf/bf-2.xsd"/>
+    <system systemId="file:/C:/Projects/WeSN/trunk/Product/Production/Interfaces/docs.oasis-open.org/wsn/t-1.xsd" uri="src/conf/xml-resources/web-services/SubscriptionManagerService/wsdl/docs.oasis-open.org/wsn/t-1.xsd"/>
+    <system systemId="file:/C:/Projects/WeSN/trunk/Product/Production/Interfaces/docs.oasis-open.org/wsrf/r-2.xsd" uri="src/conf/xml-resources/web-services/SubscriptionManagerService/wsdl/docs.oasis-open.org/wsrf/r-2.xsd"/>
+    <system systemId="file:/C:/Projects/WeSN/trunk/Product/Production/Interfaces/www.w3.org/2001/xml.xsd" uri="src/conf/xml-resources/web-services/SubscriptionManagerService/wsdl/www.w3.org/2001/xml.xsd"/>
+</catalog>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xalan="http://xml.apache.org/xslt" xmlns:ejbjarproject2="http://www.netbeans.org/ns/j2ee-ejbjarproject/2" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSGEN SECTION
+                ===================
+            -->
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <mkdir dir="${build.generated.dir}/wsimport/service"/>
+        <mkdir dir="${build.generated.dir}/wsimport/binaries"/>
+        <mkdir dir="${classes.dir}"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${j2ee.platform.wsimport.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsimport-service-check-NotificationProducerService" depends="wsimport-init">
+        <condition property="wsimport-service-NotificationProducerService.notRequired">
+            <available file="${build.generated.dir}/wsimport/service/org/oasis_open/docs/wsn/bw_2/NotificationProducerService.java"/>
+        </condition>
+    </target>
+    <target name="wsimport-service-NotificationProducerService" depends="wsimport-init,wsimport-service-check-NotificationProducerService" unless="wsimport-service-NotificationProducerService.notRequired">
+        <property name="service-wsdl-NotificationProducerService" location="${meta.inf}/xml-resources/web-services/NotificationProducerService/wsdl/WSN.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/wsimport/service" destdir="${build.generated.dir}/wsimport/binaries" wsdl="${service-wsdl-NotificationProducerService}" catalog="catalog.xml" extension="true" verbose="true" xnocompile="true"/>
+        <property name="targetLocation-NotificationProducerService" location="${meta.inf}/wsdl/NotificationProducerService"/>
+        <property name="sourceLocation-NotificationProducerService" location="${meta.inf}/xml-resources/web-services/NotificationProducerService/wsdl/"/>
+        <copy todir="${targetLocation-NotificationProducerService}">
+            <fileset dir="${sourceLocation-NotificationProducerService}"/>
+        </copy>
+    </target>
+    <target name="wsimport-service-clean-NotificationProducerService" depends="-init-project">
+        <delete dir="${build.generated.dir}/wsimport/service/org/oasis_open/docs/wsn/bw_2"/>
+    </target>
+    <target name="wsimport-service-check-NotificationConsumerService" depends="wsimport-init">
+        <condition property="wsimport-service-NotificationConsumerService.notRequired">
+            <available file="${build.generated.dir}/wsimport/service/org/oasis_open/docs/wsn/bw_2/NotificationConsumerService.java"/>
+        </condition>
+    </target>
+    <target name="wsimport-service-NotificationConsumerService" depends="wsimport-init,wsimport-service-check-NotificationConsumerService" unless="wsimport-service-NotificationConsumerService.notRequired">
+        <property name="service-wsdl-NotificationConsumerService" location="${meta.inf}/xml-resources/web-services/NotificationConsumerService/wsdl/WSN.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/wsimport/service" destdir="${build.generated.dir}/wsimport/binaries" wsdl="${service-wsdl-NotificationConsumerService}" catalog="catalog.xml" extension="true" verbose="true" xnocompile="true"/>
+        <property name="targetLocation-NotificationConsumerService" location="${meta.inf}/wsdl/NotificationConsumerService"/>
+        <property name="sourceLocation-NotificationConsumerService" location="${meta.inf}/xml-resources/web-services/NotificationConsumerService/wsdl/"/>
+        <copy todir="${targetLocation-NotificationConsumerService}">
+            <fileset dir="${sourceLocation-NotificationConsumerService}"/>
+        </copy>
+    </target>
+    <target name="wsimport-service-clean-NotificationConsumerService" depends="-init-project">
+        <delete dir="${build.generated.dir}/wsimport/service/org/oasis_open/docs/wsn/bw_2"/>
+    </target>
+    <target name="wsimport-service-check-SubscriptionManagerService" depends="wsimport-init">
+        <condition property="wsimport-service-SubscriptionManagerService.notRequired">
+            <available file="${build.generated.dir}/wsimport/service/org/oasis_open/docs/wsn/bw_2/SubscriptionManagerService.java"/>
+        </condition>
+    </target>
+    <target name="wsimport-service-SubscriptionManagerService" depends="wsimport-init,wsimport-service-check-SubscriptionManagerService" unless="wsimport-service-SubscriptionManagerService.notRequired">
+        <property name="service-wsdl-SubscriptionManagerService" location="${meta.inf}/xml-resources/web-services/SubscriptionManagerService/wsdl/WSN.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/wsimport/service" destdir="${build.generated.dir}/wsimport/binaries" wsdl="${service-wsdl-SubscriptionManagerService}" catalog="catalog.xml" extension="true" verbose="true" xnocompile="true"/>
+        <property name="targetLocation-SubscriptionManagerService" location="${meta.inf}/wsdl/SubscriptionManagerService"/>
+        <property name="sourceLocation-SubscriptionManagerService" location="${meta.inf}/xml-resources/web-services/SubscriptionManagerService/wsdl/"/>
+        <copy todir="${targetLocation-SubscriptionManagerService}">
+            <fileset dir="${sourceLocation-SubscriptionManagerService}"/>
+        </copy>
+    </target>
+    <target name="wsimport-service-clean-SubscriptionManagerService" depends="-init-project">
+        <delete dir="${build.generated.dir}/wsimport/service/org/oasis_open/docs/wsn/bw_2"/>
+    </target>
+    <target name="wsimport-service-generate" depends="wsimport-service-NotificationProducerService, wsimport-service-NotificationConsumerService, wsimport-service-SubscriptionManagerService"/>
+    <target name="wsimport-service-compile" depends="wsimport-service-generate">
+        <ejbjarproject2:javac srcdir="${build.generated.dir}/wsimport/service" classpath="${j2ee.platform.wsimport.classpath}:${javac.classpath}" destdir="${classes.dir}"/>
+    </target>
+</project>

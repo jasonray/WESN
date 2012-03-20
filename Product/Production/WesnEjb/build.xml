@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- You may freely edit this file. See commented blocks below for -->
+<!-- some examples of how to customize the build. -->
+<!-- (If you delete it and reopen the project it will be recreated.) -->
+<!-- By default, only the Clean and Build commands use this build script. -->
+<!-- Commands such as Run, Debug, and Test only use this build script if -->
+<!-- the Compile on Save feature is turned off for the project. -->
+<!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
+<!-- in the project's Project Properties dialog box.-->
+<project name="WesnEjb" default="default" basedir="." xmlns:ejbjarproject="http://www.netbeans.org/ns/j2ee-ejbjarproject/3">
+    <description>Builds, tests, and runs the project WesnEjb.</description>
+    <import file="nbproject/build-impl.xml"/>
+    <!--
+
+    There exist several targets which are by default empty and which can be 
+    used for execution of your tasks. These targets are usually executed 
+    before and after some main targets. They are: 
+
+      -pre-init:                 called before initialization of project properties
+      -post-init:                called after initialization of project properties
+      -pre-compile:              called before javac compilation
+      -post-compile:             called after javac compilation
+      -pre-compile-single:       called before javac compilation of single file
+      -post-compile-single:      called after javac compilation of single file
+      -pre-dist:                 called before archive building
+      -post-dist:                called after archive building
+      -post-clean:               called after cleaning build products
+      -pre-run-deploy:           called before deploying
+      -post-run-deploy:          called after deploying
+
+    (Targets beginning with '-' are not intended to be called on their own.)
+
+    Example of pluging an obfuscator after the compilation could look like 
+
+        <target name="-post-compile">
+            <obfuscate>
+                <fileset dir="${build.classes.dir}"/>
+            </obfuscate>
+        </target>
+
+    For list of available properties check the imported 
+    nbproject/build-impl.xml file. 
+
+
+    Other way how to customize the build is by overriding existing main targets.
+    The target of interest are: 
+
+      init-macrodef-javac:    defines macro for javac compilation
+      init-macrodef-debug:    defines macro for class debugging
+      do-dist:                archive building
+      run:                    execution of project 
+      javadoc-build:          javadoc generation 
+
+    Example of overriding the target for project execution could look like 
+
+        <target name="run" depends="<PROJNAME>-impl.jar">
+            <exec dir="bin" executable="launcher.exe">
+                <arg file="${dist.jar}"/>
+            </exec>
+        </target>
+
+    Notice that overridden target depends on jar target and not only on 
+    compile target as regular run target does. Again, for list of available 
+    properties which you can use check the target you are overriding in 
+    nbproject/build-impl.xml file. 
+
+    -->
+
+    <target name="wsimport-service-NotificationProducerService" depends="wsimport-init,wsimport-service-check-NotificationProducerService" unless="wsimport-service-NotificationProducerService.notRequired">
+<!--
+        <property name="service-wsdl-NotificationProducerService" location="${meta.inf}/xml-resources/web-services/NotificationProducerService/wsdl/WSN.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/wsimport/service" destdir="${build.generated.dir}/wsimport/binaries" wsdl="${service-wsdl-NotificationProducerService}" catalog="catalog.xml" extension="true" verbose="true" xnocompile="true"/>
+        <property name="targetLocation-NotificationProducerService" location="${meta.inf}/wsdl/NotificationProducerService"/>
+        <property name="sourceLocation-NotificationProducerService" location="${meta.inf}/xml-resources/web-services/NotificationProducerService/wsdl/"/>
+        <copy todir="${targetLocation-NotificationProducerService}">
+            <fileset dir="${sourceLocation-NotificationProducerService}"/>
+        </copy>
+-->
+    </target>
+    <target name="wsimport-service-NotificationConsumerService" depends="wsimport-init,wsimport-service-check-NotificationConsumerService" unless="wsimport-service-NotificationConsumerService.notRequired">
+<!--
+        <property name="service-wsdl-NotificationConsumerService" location="${meta.inf}/xml-resources/web-services/NotificationConsumerService/wsdl/WSN.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/wsimport/service" destdir="${build.generated.dir}/wsimport/binaries" wsdl="${service-wsdl-NotificationConsumerService}" catalog="catalog.xml" extension="true" verbose="true" xnocompile="true"/>
+        <property name="targetLocation-NotificationConsumerService" location="${meta.inf}/wsdl/NotificationConsumerService"/>
+        <property name="sourceLocation-NotificationConsumerService" location="${meta.inf}/xml-resources/web-services/NotificationConsumerService/wsdl/"/>
+        <copy todir="${targetLocation-NotificationConsumerService}">
+            <fileset dir="${sourceLocation-NotificationConsumerService}"/>
+        </copy>
+-->
+    </target>
+    <target name="wsimport-service-SubscriptionManagerService" depends="wsimport-init,wsimport-service-check-SubscriptionManagerService" unless="wsimport-service-SubscriptionManagerService.notRequired">
+<!--
+        <property name="service-wsdl-SubscriptionManagerService" location="${meta.inf}/xml-resources/web-services/SubscriptionManagerService/wsdl/WSN.wsdl"/>
+        <wsimport sourcedestdir="${build.generated.dir}/wsimport/service" destdir="${build.generated.dir}/wsimport/binaries" wsdl="${service-wsdl-SubscriptionManagerService}" catalog="catalog.xml" extension="true" verbose="true" xnocompile="true"/>
+        <property name="targetLocation-SubscriptionManagerService" location="${meta.inf}/wsdl/SubscriptionManagerService"/>
+        <property name="sourceLocation-SubscriptionManagerService" location="${meta.inf}/xml-resources/web-services/SubscriptionManagerService/wsdl/"/>
+        <copy todir="${targetLocation-SubscriptionManagerService}">
+            <fileset dir="${sourceLocation-SubscriptionManagerService}"/>
+        </copy>
+-->
+    </target>
+
+
+</project>
